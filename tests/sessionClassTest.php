@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 		$s1 = new Session(null, null, null, "Fall", array ("M", "W"), 90000, 100000, null);
 		$s2 = new Session(null, null, null, "Fall", array ("M", "W"), 90000, 100000, null);
 
-		$this->assertTrue(conflictExists($s1,$s2));
+		$this->assertFalse(conflictExists($s1,$s2));
 	}
 
 	public function testNoConflictExists ()
