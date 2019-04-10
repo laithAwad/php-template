@@ -1,6 +1,6 @@
 <?php
-require "/src/Session.php";
-//use PHPUnit\Framework\TestCase;
+//require "/src/Session.php";
+use PHPUnit\Framework\TestCase;
 //require_once __DIR__.'/../src/Session.php';
 
  class conflictChecker extends TestCase
