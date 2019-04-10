@@ -1,11 +1,10 @@
 <?php
 
-require_once __DIR__.'/Databases/DBinterface/DBinterface.php';
+require_once 'Databases/DBinterface/DBinterface.php';
 require_once 'Session.php';
 require_once 'Course.php';
 require_once 'Semester.php';
-require_once 'heapSort.php';
-require_once 'User.php';
+require_once 'user.php';
 
 $DEFAULT_COURSES_PER_SEM = 4;
 $semesters = array("Winter", "Summer","Fall");
