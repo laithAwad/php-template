@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 	{
   //  $userName, $email, $userSchedule, $firstSemester
     $userSchedule1 = new UserSchedule(null, null);
-		$User1 = new User("userName", "", $userSchedule1 , "Fall");
+		$User1 = new User("userName", "test@t.com", $userSchedule1 , "Fall");
 		//$s2 = new Session(null, null, null, "Fall", array ("M", "W"), 90000, 100000, null);
       $userSchedule1->genProgramSched($User1);
     $listOfSemester1 = $userSchedule1 -> getListOfSemesters();
