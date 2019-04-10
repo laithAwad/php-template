@@ -79,7 +79,7 @@ use PHPUnit\Framework\TestCase;
 
     $this->assertEquals($course1Priority,-2);
     $this->assertEquals($course2Priority,-1);
-    $this->assertEquals($course2Priority, 0);
+    $this->assertEquals($course3Priority, 0);
 
   }
 
