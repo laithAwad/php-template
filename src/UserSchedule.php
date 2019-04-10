@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/Databases/DBinterface/DBinterface.php';
+require_once 'Databases/DBinterface/DBinterface.php';
 require_once 'Session.php';
 require_once 'Course.php';
 require_once 'Semester.php';
