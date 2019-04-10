@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
     $courses = array ($course1, $course2);
 
-    calPriority($courses);
+    updateAllPriority($courses);
 
     $course1Priority = $course1->getPriority();
     $course2Priority = $course2->getPriority();
@@ -29,7 +29,7 @@ use PHPUnit\Framework\TestCase;
 
     $courses = array ($course1, $course2);
 
-    calPriority($courses);
+    updateAllPriority($courses);
 
     $course1Priority = $course1->getPriority();
     $course2Priority = $course2->getPriority();
@@ -49,7 +49,7 @@ use PHPUnit\Framework\TestCase;
 
     $courses = array ($course1, $course2, $course3);
 
-    calPriority($courses);
+    updateAllPriority($courses);
 
     $course1Priority = $course1->getPriority();
     $course2Priority = $course2->getPriority();
@@ -72,7 +72,7 @@ use PHPUnit\Framework\TestCase;
 
     $courses = array ($course1, $course2, $course3);
 
-    calPriority($courses);
+    updateAllPriority($courses);
 
     $course1Priority = $course1->getPriority();
     $course2Priority = $course2->getPriority();
