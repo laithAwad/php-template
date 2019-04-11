@@ -49,7 +49,7 @@ use PHPUnit\Framework\TestCase;
 	}
 
 	#getInputtedPassed($email) test
-	public function testValidEmailGetInputtedPassed() ()
+	public function testValidEmailGetInputtedPassed()
 	{
 		//make sure you have a valid email in your db
 		$userEmail = "hani-111-222@hotmail.com";
@@ -57,7 +57,7 @@ use PHPUnit\Framework\TestCase;
 		$this->assertTrue(!is_null(getInputtedPassed($userEmail)));
 	}
 
-	public function testValidEmailGetInputtedPassed() ()
+	public function testValidEmailGetInputtedPassed() 
 	{
 		//make sure you have a valid email in your db
 		$userEmail = "NonExistingEmail";
