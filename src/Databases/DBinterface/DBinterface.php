@@ -362,8 +362,8 @@ function getUntakenCourses($email)
 function updateTakenCourses($email,$courseName)
 {
 	require('config/db.php');
-	echo false;
-	echo true;
+/*	echo false;
+	echo true;*/
 	$query = 'select UserId from users where Email="'.$email.'"';
 	$result = mysqli_query($conn, $query);
 	//$userID = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -373,11 +373,11 @@ function updateTakenCourses($email,$courseName)
 	if(empty($userId))
 		return false;
 	$untaken=getUntakenCourses($email);
-	var_dump($untaken);
+	//var_dump($untaken);
 	static	$counter=0;
 	$found=false;
 	foreach ($untaken as $untook) {
-		$courseUntakenName=$untook['CourseName'];
+		$courseUntakenName=$untook->getCourseName();
 		if($courseUntakenName==$courseName){
 			global $found;
 			$found=true;
@@ -387,8 +387,9 @@ function updateTakenCourses($email,$courseName)
 	if($found===true){
 		$query = 'insert into pass (UserId, CourseName) values ('.$userId.',"'.$courseName.'")';
 		$result = mysqli_query($conn, $query);
+		return true;
 	}else{
-		echo "This course has been already added";
+		return false;
 	}
 
 }
@@ -567,7 +568,7 @@ function changeemail($email,$username){
     }
 
     else{
-        echo "Can't change the email to an already existing email";
+        //echo "Can't change the email to an already existing email";
         return 0;
     }
 }
