@@ -74,7 +74,7 @@ use PHPUnit\Framework\TestCase;
 		$this->assertTrue(!is_null(getFirstSemester($userEmail)));
 	}
 
-	public function testValidEmailGetFirstSemester()
+	public function testNotValidEmailGetFirstSemester()
 	{
 		//make sure you have a valid email in your db
 		$userEmail = "NonExistingEmail";
