@@ -3,7 +3,7 @@ use PHPUnit\Framework\TestCase;
 
  class DBInterface extends TestCase
 {
-	#getUntakenCourse($email) test
+	//getUntakenCourse($email) test
 	public function testCorrectEmailGetUntakenCourses ()
 	{
 		//make sure you have a valid email in your db
@@ -21,7 +21,7 @@ use PHPUnit\Framework\TestCase;
 		$this->assertFalse(is_array($untakenCourse));
 	}
 
-	#updateTakenCourses($email,$coursesName) test
+	//updateTakenCourses($email,$coursesName) test
 	public function testCorrectEmailUpdateTakenCourses ()
 	{
 		//make sure you have a valid email in your db & that user didn't take the course
@@ -57,7 +57,7 @@ use PHPUnit\Framework\TestCase;
 		$this->assertTrue(!is_null(getInputtedPassed($userEmail)));
 	}
 
-	public function testValidEmailGetInputtedPassed() 
+	public function testValidEmailGetInputtedNotPassed()
 	{
 		//make sure you have a valid email in your db
 		$userEmail = "NonExistingEmail";
@@ -65,7 +65,7 @@ use PHPUnit\Framework\TestCase;
 		$this->assertFalse(!is_null(getInputtedPassed($userEmail)));
 	}
 
-	#getFirstSemester($email) test
+	//getFirstSemester($email) test
 	public function testValidEmailGetFirstSemester()
 	{
 		//make sure you have a valid email in your db
@@ -82,7 +82,7 @@ use PHPUnit\Framework\TestCase;
 		$this->assertFalse(!is_null(getFirstSemester($userEmail)));
 	}
 
-	#changeemail($email,$username) test
+	//changeemail($email,$username) test
 	public function testNonEmailExistChangeemail()
 	{
 		//make sure you have a valid $username in your db & the $newEmail doesn't exist in the db
